@@ -18,7 +18,7 @@ function App() {
       <SecondaryButton />
     </div>
 
-  </div>
+  </div> 
   )
 }
 
