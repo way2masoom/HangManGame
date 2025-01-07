@@ -1,14 +1,17 @@
+// Importing the stylingButton file
+import getButtonStyling from "./getButtonStyling";
 
-function Button({ text, onClickHandler }) {
-    // console.log({text}); // object text='Click me'
+function Button({ text, onClickHandler, styleType = "primary" }) {
     return (
         <button onClick={onClickHandler}
-            className="text-white bg-blue-500"
+            // Calling the getButtonStyling Function
+            className={`px-4 py-3 ${getButtonStyling(styleType)} text-white`}
         >
 
             {text}
         </button>
     );
 }
+
 
 export default Button;
