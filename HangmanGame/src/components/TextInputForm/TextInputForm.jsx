@@ -1,21 +1,25 @@
 // Text Input Form
-
 import Button from "../button/button";
 import TextInput from "../TextInput/TextInput";
 
-function TextInputForm() {
+
+function TextInputForm({ inputType, handelFormSubmit, handelTextInputChange, handelShowHideClick }) {
+
     return (
-        <form>
+        <form onSubmit={handelFormSubmit}>
             <div> <TextInput
+                type={inputType}
                 label={"Enter Word or Phase"}
                 placeholder={"Enter your Word or Phase here ..."}
+                onChangeHandler={handelTextInputChange}
 
             /> </div>
 
             <div>
                 <Button
-                    styleType={"bg-warning"}
-                    text={"Show/Hide"}
+                    styleType={"warning"}
+                    text={inputType === 'password' ? "show" : "hide"}
+                    onClickHandler={handelShowHideClick}
                 />
             </div>
 
