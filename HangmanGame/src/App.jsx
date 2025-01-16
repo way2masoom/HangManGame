@@ -13,7 +13,6 @@ function App() {
       <Route path='/play' element={<PlayGame />} />
       <Route path='/' element={<div>HOME</div>} />
 
-
     </Routes>
 
 

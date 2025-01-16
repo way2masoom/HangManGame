@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TextInputForm from "./TextInputForm";
+import { useNavigate } from "react-router-dom";
 
 function TextInputFormContainer() {
 
@@ -10,10 +11,22 @@ function TextInputFormContainer() {
     // Making one more Sates Variable to store the Input Data 
     const [value, setValue] = useState("");
 
+    // Navigate to the path 
+    const navigate = useNavigate(); // useNavigate is a function that returns a navigation function
+
     // To prevent the form Summation
     function handelFormSubmit(event) {
         event.preventDefault();
         console.log("Form submit Prevented", value);
+
+        // React Router Dom Using Logic
+        if (value) {
+            // if we have someting in the value then we want to go to the play Page 
+            setTimeout(() => {
+                navigate('/play')
+            }, 2000);
+        }
+        // navigate('/play')
 
     }
 
