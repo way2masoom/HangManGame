@@ -3,7 +3,7 @@ import TextInputForm from "./TextInputForm";
 
 function TextInputFormContainer() {
  
-    // States Variable  aslo called React Hook 
+    // States Variable  also called React Hook 
     const [inputType, setInputType] = useState("password")
     // let inputType = "password";
 
