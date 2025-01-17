@@ -14,6 +14,7 @@ function TextInputFormContainer() {
     // Navigate to the path 
     const navigate = useNavigate(); // useNavigate is a function that returns a navigation function
 
+
     // To prevent the form Summation
     function handelFormSubmit(event) {
         event.preventDefault();
@@ -21,13 +22,9 @@ function TextInputFormContainer() {
 
         // React Router Dom Using Logic
         if (value) {
-            // if we have someting in the value then we want to go to the play Page 
-            setTimeout(() => {
-                navigate('/play')
-            }, 2000);
+            // if we have something in the value then we want to go to the play Page 
+            navigate(`/play`, { state: { word: value } }); // Making a state Object to pass the input text
         }
-        // navigate('/play')
-
     }
 
     // Form to handel Change when text is input
