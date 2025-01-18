@@ -23,7 +23,10 @@ function TextInputFormContainer() {
         // React Router Dom Using Logic
         if (value) {
             // if we have something in the value then we want to go to the play Page 
-            navigate(`/play`, { state: { word: value } }); // Making a state Object to pass the input text
+
+            // Query Param
+            navigate(`/play?text=${value}`)
+            // navigate(`/play`, { state: { word: value } }); // Making a state Object to pass the input text
         }
     }
 

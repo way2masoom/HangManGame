@@ -11,7 +11,11 @@ function App() {
 
       <Route path='/start' element={<StartGame />} />
       <Route path='/play' element={<PlayGame />} />
-      <Route path='/' element={<div>HOME</div>} />
+      <Route path='/' element={
+        <div className="... flex items-center justify-center text-6xl m-16">
+          <h1>HOME</h1>
+        </div>
+      } />
 
     </Routes>
 
