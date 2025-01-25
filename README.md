@@ -73,10 +73,10 @@ The `wordServer` provides the words used in the Hangman game. To set it up:
 
 3. **Start the Server**  
    ```bash
-   npm start
+   npx json-server db.json
    ```
 
-   The server will run on `http://localhost:5000` by default.  
+   The server will run on `http://localhost:3000` by default.  
 
 ---
 
