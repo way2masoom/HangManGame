@@ -74,28 +74,8 @@ function TextInputFormContainer() {
                 handelTextInputChange={handelTextInputChange}
                 handelShowHideClick={handelShowHideClick}
             />
-
-            {(inputType === 'password') ? <Temp /> : null}
         </>
 
-    );
-}
-
-// Temporary  function
-function Temp() {
-    useEffect(() => {
-        console.log("Temp Component first Loaded");
-
-        // Unmounting the Temp function 
-        return (() => {
-            console.log("Temp Component Unmounting");
-        })
-    }, [])
-
-    return (
-        <div>
-            <h1>Temp Function</h1>
-        </div>
     );
 }
 
