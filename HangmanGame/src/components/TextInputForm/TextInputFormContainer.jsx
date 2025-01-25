@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TextInputForm from "./TextInputForm";
 import { useNavigate } from "react-router-dom";
 
@@ -46,8 +46,13 @@ function TextInputFormContainer() {
 
         console.log(inputType);
 
-
     }
+
+    // Used Effect Hook
+    useEffect(() => {
+        console.log("Components is loaded");
+
+    })
 
     return (<TextInputForm
         inputType={inputType}
