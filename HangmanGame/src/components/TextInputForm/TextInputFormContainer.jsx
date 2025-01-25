@@ -48,18 +48,54 @@ function TextInputFormContainer() {
 
     }
 
-    // Used Effect Hook
+    // use of 'usedEffect' Hook
+    // useEffect(() => {
+    //     console.log("Components first loaded"); // Not call on update 
+    // }, []) // Passing an empty dependency array
+
+    // useEffect(() => {
+    //     console.log("Components first Loaded and update");
+    // }) // Not passing dependency array 
+
+    // useEffect(() => {
+    //     console.log("Components first Loaded and Update value Change");
+    // }, [value])
+
+    // useEffect(() => {
+    //     console.log("Components first Loaded and type value changed");
+    // }, [inputType])
+
+
+    return (
+        <>
+            <TextInputForm
+                inputType={inputType}
+                handelFormSubmit={handelFormSubmit}
+                handelTextInputChange={handelTextInputChange}
+                handelShowHideClick={handelShowHideClick}
+            />
+
+            {(inputType === 'password') ? <Temp /> : null}
+        </>
+
+    );
+}
+
+// Temporary  function
+function Temp() {
     useEffect(() => {
-        console.log("Components is loaded");
+        console.log("Temp Component first Loaded");
 
-    })
+        // Unmounting the Temp function 
+        return (() => {
+            console.log("Temp Component Unmounting");
+        })
+    }, [])
 
-    return (<TextInputForm
-        inputType={inputType}
-        handelFormSubmit={handelFormSubmit}
-        handelTextInputChange={handelTextInputChange}
-        handelShowHideClick={handelShowHideClick}
-    />
+    return (
+        <div>
+            <h1>Temp Function</h1>
+        </div>
     );
 }
 
