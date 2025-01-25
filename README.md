@@ -1,5 +1,3 @@
-Here's the updated and improved README with the requested changes:
-
 ---
 
 # HangManGame 🎮
