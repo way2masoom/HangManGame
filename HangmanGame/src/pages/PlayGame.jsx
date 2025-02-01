@@ -36,7 +36,7 @@ function PlayGame() {
             {state?.wordSelected && (
                 <>
                     {/* Masked Function for the guessing the Letters */}
-                    <MaskedText text={state.wordSelected} guessedLetters={guessedLetters} /> <br />
+                    <MaskedText text={state?.wordSelected} guessedLetters={guessedLetters} /> <br />
 
                     {/* HangMan Image */}
                     <div>
@@ -45,7 +45,7 @@ function PlayGame() {
                     </div>
 
                     <div>
-                        <LettersButtons text={state.wordSelected} guessedLetters={[guessedLetters]} onLetterClick={handleLetterClick} />
+                        <LettersButtons text={state?.wordSelected} guessedLetters={[guessedLetters]} onLetterClick={handleLetterClick} />
                     </div>
                 </>
             )}
