@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 function Home() {
     // Defining a useState for the Words
     const [word, setWord] = useState('');
+    const [hint, setHint] = useState('')
 
     // Defining a function to Fetch the words from the server/Network
     async function fetchWords() {
@@ -18,6 +19,7 @@ function Home() {
         console.log(data[randomIndex]);
 
         setWord(data[randomIndex].wordValue)
+        setHint(data[randomIndex].wordHint)
     }
 
     //Using 'useEffect' to get the words
@@ -28,7 +30,9 @@ function Home() {
     // UI On home Page
     return (
         <>
-            <Link to="/play" state={{ wordSelected: word }} >
+            {/* <h2>Random Word: {word}</h2 >
+            <p>Hint: {hint}</p> */}
+            <Link to="/play" state={{ wordSelected: word, wordHint: hint }}>
                 <Button text="Single Player Game!" /></Link> <br />
             <div className="mt-4">
                 <Link to="/start">

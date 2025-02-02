@@ -24,13 +24,15 @@ function PlayGame() {
         setGuessedLetters([...guessedLetters, letter])
     }
 
-
-
     return (
         <>
             <h1>Play Game</h1>
             {/* Text Of the StartGame  */}
             {/* <h1>{state.wordSelected}</h1> <br /> */}
+
+            {/* Hint for the Word  */}
+            <p>Hint : {state.wordHint}</p>
+
 
             {/* If the stateWord have some value then only executed the game*/}
             {state?.wordSelected && (
